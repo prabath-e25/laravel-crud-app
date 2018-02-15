@@ -3,19 +3,19 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Apartment;
 
 
 class ApartmentsController extends Controller
 {
   public function getApartments(){
-    $apartments = array('apartment 1', 'apartment 2', 'apartment 3', 'apartment 4', 'apartment 5');
-    $output = '<h1>qqq</h1>';
-    $output .= '<ul>';
-    foreach ($apartments as $key => $apartment) {
-      $output .= '<li><a href="">'.$apartment.'</a></li>';
-    }
-    $output .= '</ul>';
+    $apartments = Apartment::all();
+    return view('apartments', array('apartments' => $apartments));
+  }
 
-    return $output;
+  public function showApartment($id)
+  {
+    $apartment = Apartment::find($id);
+    return view('apartment', array('apartment' => $apartment));
   }
 }

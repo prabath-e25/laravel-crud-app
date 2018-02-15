@@ -20,3 +20,4 @@ Route::get('/login', function () {
 });
 
 Route::get('/apartments', 'ApartmentsController@getApartments');
+Route::get('/apartment/{id}', 'ApartmentsController@showApartment');
