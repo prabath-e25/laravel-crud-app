@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Apartment;
 
@@ -22,8 +25,11 @@ class ApartmentsController extends Controller
 
   public function addApartments()
   {
-    // $apartments = Apartment::all();
-    // return view('apartment/create', 'added');
-    return 'Task added';
+    return view('create');
+  }
+
+  public function store(Request $request)
+  {
+    return $request->name;
   }
 }
