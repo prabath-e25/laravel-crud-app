@@ -30,6 +30,7 @@ class ApartmentsController extends Controller
 
   public function store(Request $request)
   {
-    return $request->name;
+    // return $request->name;
+    return $request;
   }
 }

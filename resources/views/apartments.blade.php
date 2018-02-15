@@ -1,7 +1,14 @@
 @extends('main')
   @section('content')
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Apartments</h1>
+      </div>
+      <div class="col-md-6">
+        <a href="./apartments/create" class="btn btn-primary pull-right">Add Apartment</a>
+      </div>
+    </div>
     <div class="tables">
-    <h1>Apartments</h1>
     @if($apartments)
     <div class="bs-example widget-shadow" data-example-id="hoverable-table">
         <table class="table table-hover">
