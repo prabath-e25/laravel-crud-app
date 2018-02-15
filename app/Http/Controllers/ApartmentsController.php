@@ -15,7 +15,8 @@ class ApartmentsController extends Controller
   public function getApartments()
   {
     $apartments = Apartment::all();
-    return view('apartments', array('apartments' => $apartments));
+    $title = 'Apartments';
+    return view('apartments', array('apartments' => $apartments, 'title' => $title ));
   }
 
   public function showApartment($id)

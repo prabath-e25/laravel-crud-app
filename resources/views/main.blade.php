@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
   <head>
-    <title>App</title>
+    <title>{{$title or 'App'}}</title>
     @include('includes.head')
   </head>
   <body class="cbp-spmenu-push">
