@@ -4,7 +4,6 @@
     <h1>Apartments</h1>
     @if($apartments)
     <div class="bs-example widget-shadow" data-example-id="hoverable-table">
-      <h4>Hover Rows Table:</h4>
         <table class="table table-hover">
           <thead>
             <tr>

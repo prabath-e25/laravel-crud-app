@@ -8,7 +8,8 @@ use App\Apartment;
 
 class ApartmentsController extends Controller
 {
-  public function getApartments(){
+  public function getApartments()
+  {
     $apartments = Apartment::all();
     return view('apartments', array('apartments' => $apartments));
   }
@@ -17,5 +18,12 @@ class ApartmentsController extends Controller
   {
     $apartment = Apartment::find($id);
     return view('apartment', array('apartment' => $apartment));
+  }
+
+  public function addApartments()
+  {
+    // $apartments = Apartment::all();
+    // return view('apartment/create', 'added');
+    return 'Task added';
   }
 }

@@ -19,5 +19,6 @@ Route::get('/login', function () {
     return view('welcome');
 });
 
+Route::get('/apartments/create', 'ApartmentsController@addApartments');
 Route::get('/apartments', 'ApartmentsController@getApartments');
 Route::get('/apartment/{id}', 'ApartmentsController@showApartment');
