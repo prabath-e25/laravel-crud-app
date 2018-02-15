@@ -11,7 +11,9 @@
     		<div id="page-wrapper">
     			<div class="main-page">
             @if(Session::has('message'))
-              <div>{{Session::get('message')}}</div>
+              <div class="alert alert-success" role="alert">
+    						<strong>Well done!</strong> {{Session::get('message')}}
+    					</div>
             @endif
             @yield('content')
     			</div>
