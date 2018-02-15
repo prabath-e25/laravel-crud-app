@@ -10,6 +10,9 @@
       @include('includes.header')
     		<div id="page-wrapper">
     			<div class="main-page">
+            @if(Session::has('message'))
+              <div>{{Session::get('message')}}</div>
+            @endif
             @yield('content')
     			</div>
     		</div>

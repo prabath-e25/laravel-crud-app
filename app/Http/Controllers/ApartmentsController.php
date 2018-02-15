@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Apartment;
 
+use App\Console\Commands\storeApartmentsCommand;
 
 class ApartmentsController extends Controller
 {
@@ -30,7 +31,15 @@ class ApartmentsController extends Controller
 
   public function store(Request $request)
   {
-    // return $request->name;
-    return $request;
+    $name = $request->input('name');
+    $address = $request->input('address');
+    $no_of_rooms = $request->input('no_of_rooms');
+
+    $command = new storeApartmentsCommand($name,$address,$no_of_rooms);
+    $this->dispatch($command);
+
+    // return \Redirect::route('Apartment.getApartments')
+    return redirect('./apartments')
+            ->with('message','added new');
   }
 }
