@@ -18,18 +18,18 @@ class ApartmentsController extends Controller
   {
     $apartments = Apartment::all();
     $title = 'Apartments';
-    return view('apartments', array('apartments' => $apartments, 'title' => $title ));
+    return view('apartment.apartments', array('apartments' => $apartments, 'title' => $title ));
   }
 
   public function showApartment($id)
   {
     $apartment = Apartment::find($id);
-    return view('apartment', array('apartment' => $apartment));
+    return view('apartment.apartment', array('apartment' => $apartment));
   }
 
   public function addApartments()
   {
-    return view('create');
+    return view('apartment.create');
   }
 
   public function store(Request $request)
@@ -49,7 +49,7 @@ class ApartmentsController extends Controller
   public function edit($id)
   {
     $apartment = Apartment::find($id);
-    return view('editApartment', array('apartment' => $apartment));
+    return view('apartment.editApartment', array('apartment' => $apartment));
   }
 
   public function update(Request $request, $id)

@@ -5,7 +5,7 @@
         <h1>Apartments</h1>
       </div>
       <div class="col-md-6">
-        <a href="./apartments/create" class="btn btn-primary pull-right">Add Apartment</a>
+        <a href="./apartments/create" class="btn btn-primary pull-right">New Apartment</a>
       </div>
     </div>
     <div class="tables">
