@@ -28,7 +28,10 @@
                 <td>{{$apartment->apartment_name}}</td>
                 <td>{{$apartment->apartment_address}}</td>
                 <td>{{$apartment->no_of_rooms}}</td>
-                <td><a href='./apartment/{{$apartment->id}}'>edit</a></td>
+                <td>
+                  <a href='./apartment/{{$apartment->id}}'>View</a> /
+                  <a href='./apartment/{{$apartment->id}}/edit'>Edit</a>
+                </td>
               </tr>
             @endforeach
           </tbody>

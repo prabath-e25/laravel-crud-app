@@ -23,4 +23,7 @@ Route::get('/apartments/create', 'ApartmentsController@addApartments');
 Route::get('/apartments', 'ApartmentsController@getApartments');
 Route::get('/apartment/{id}', 'ApartmentsController@showApartment');
 
+Route::get('/apartment/{id}/edit', 'ApartmentsController@edit');
+Route::post('/apartment/{id}/edit', 'ApartmentsController@update');
+
 Route::post('/apartments/create', 'ApartmentsController@store');
