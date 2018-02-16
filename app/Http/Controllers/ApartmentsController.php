@@ -10,6 +10,7 @@ use App\Apartment;
 
 use App\Console\Commands\storeApartmentsCommand;
 use App\Console\Commands\UpdateApartmentsCommand;
+use App\Console\Commands\DestroyApartmentsCommand;
 
 class ApartmentsController extends Controller
 {
@@ -63,6 +64,16 @@ class ApartmentsController extends Controller
     // return \Redirect::route('Apartment.getApartments')
     return redirect('./apartments')
             ->with('message','update apartment');
+  }
+
+  public function destroy($id)
+  {
+    $command = new DestroyApartmentsCommand($id);
+    $this->dispatch($command);
+
+    // return \Redirect::route('Apartment.getApartments')
+    return redirect('./apartments')
+            ->with('message','delete apartment');
   }
 
 }

@@ -31,6 +31,9 @@
                 <td>
                   <a href='./apartment/{{$apartment->id}}'>View</a> /
                   <a href='./apartment/{{$apartment->id}}/edit'>Edit</a>
+                  {!! Form::open(['method' => 'DELETE', 'url' => ['/apartments/delete', $apartment->id]]) !!}
+                      {!! Form::submit('Delete', ['class' => 'btn btn-danger']); !!}
+                  {!! Form::close() !!}
                 </td>
               </tr>
             @endforeach
