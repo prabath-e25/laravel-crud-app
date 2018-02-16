@@ -29,10 +29,10 @@
                 <td>{{$apartment->apartment_address}}</td>
                 <td>{{$apartment->no_of_rooms}}</td>
                 <td>
-                  <a href='./apartment/{{$apartment->id}}'>View</a> /
-                  <a href='./apartment/{{$apartment->id}}/edit'>Edit</a>
-                  {!! Form::open(['method' => 'DELETE', 'url' => ['/apartments/delete', $apartment->id]]) !!}
-                      {!! Form::submit('Delete', ['class' => 'btn btn-danger']); !!}
+                  <a class="btn btn-primary" title="View" href='./apartment/{{$apartment->id}}'><i class="fa fa-file"></i></a>
+                  <a class="btn btn-primary" title="Edit" href='./apartment/{{$apartment->id}}/edit'><i class="fa fa-pencil"></i></a>
+                  {!! Form::open(['class' => 'pull-right','method' => 'DELETE', 'url' => ['/apartments/delete', $apartment->id]]) !!}
+                      {{Form::button('<i class="fa fa-trash"></i>', array('type' => 'submit', 'class' => 'btn btn-danger'))}}
                   {!! Form::close() !!}
                 </td>
               </tr>
